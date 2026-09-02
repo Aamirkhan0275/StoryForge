@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StoryForge</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <p class="eyebrow">LOCAL-FIRST DOCUMENTARY STUDIO</p>
+        <h1>StoryForge</h1>
+        <p class="intro">Turn one great idea into a documentary project.</p>
+      </header>
+
+      <section class="panel">
+        <h2>Start a new project</h2>
+        <form id="project-form">
+          <label for="topic">Documentary topic</label>
+          <textarea
+            id="topic"
+            name="topic"
+            minlength="3"
+            maxlength="200"
+            required
+            placeholder="e.g. How one small error destroyed NASA's Mars Climate Orbiter"
+          ></textarea>
+          <button type="submit">Save project</button>
+          <p id="form-message" class="message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="projects-section">
+        <div class="section-heading">
+          <h2>Your projects</h2>
+          <button id="refresh-button" class="secondary" type="button">Refresh</button>
+        </div>
+        <div id="projects" class="projects" aria-live="polite"></div>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

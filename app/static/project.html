@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research · StoryForge</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <a class="back-link" href="/">← All projects</a>
+      <header>
+        <p class="eyebrow">RESEARCH STAGE</p>
+        <h1 id="project-topic">Loading project…</h1>
+        <p class="intro">Save credible sources and the facts they support before scripting.</p>
+      </header>
+      <section class="panel">
+        <h2>Add a research source</h2>
+        <form id="source-form" class="source-form">
+          <label for="source-title">Source title</label>
+          <input id="source-title" required minlength="3" placeholder="e.g. NASA investigation report" />
+          <label for="source-url">Source link</label>
+          <input id="source-url" required type="url" placeholder="https://..." />
+          <label for="source-notes">Verified facts / notes</label>
+          <textarea id="source-notes" placeholder="Add relevant facts, dates, or quotes in your own words."></textarea>
+          <button type="submit">Save source</button>
+          <p id="form-message" class="message" aria-live="polite"></p>
+        </form>
+      </section>
+      <section class="projects-section">
+        <h2>Saved sources</h2>
+        <div id="sources" class="projects" aria-live="polite"></div>
+      </section>
+      <section class="projects-section">
+        <h2>Generate research brief</h2>
+        <p class="intro">StoryForge will use only extracted source text and flag unsupported gaps.</p>
+        <label for="output-language">Output language</label>
+        <select id="output-language">
+          <option>English</option>
+          <option>Urdu</option>
+          <option>Hindi</option>
+          <option>Spanish</option>
+        </select>
+        <button id="generate-research" type="button">Generate evidence-based timeline</button>
+        <p id="research-message" class="message" aria-live="polite"></p>
+        <article id="research-brief" class="research-brief" hidden></article>
+      </section>
+    </main>
+    <script src="/static/project.js"></script>
+  </body>
+</html>
